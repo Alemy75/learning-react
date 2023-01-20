@@ -1,4 +1,5 @@
 import CostItems from "./Components/Costs/CostItems";
+import NewCost from "./Components/NewCost/NewCost";
 
 const App = () => {
 
@@ -20,8 +21,14 @@ const App = () => {
         },
     ]
 
+    const addCostHandler = (cost) => {
+        console.log(cost)
+        console.log('App comp')
+    }
+
     return (
         <div className="App">
+            <NewCost onAddCost={addCostHandler}/>
             <CostItems 
                 costs = {costs}
             />
