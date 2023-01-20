@@ -4,16 +4,16 @@ import CostForm from "./CostForm";
 
 
 const NewCost = (props) => {
-    const saveCostDataHandler = (inputCostData) => {
+    const onSaveCostData = (inputCostData) => {
         const costData = {
             ...inputCostData,
-            id: Math.random().toString(),
+            id: Math.random()
         }
         props.onAddCost(costData)
     }
     return (
         <div className='new-cost'>
-            <CostForm onSaveCostData={saveCostDataHandler}/>
+            <CostForm onSaveCostData={onSaveCostData}/>
         </div>
     );
 }
