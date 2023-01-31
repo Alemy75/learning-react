@@ -1,4 +1,4 @@
-import CostItem from './CostItem'
+import CostList from './CostList'
 import './CostItems.css'
 import Card from '../UI/Card'
 import CostFilter from "./CostFilter";
@@ -20,22 +20,6 @@ const CostItems = (props) => {
             .toString() === selectedYear
     })
 
-    // Переменная контента
-    let costContent = <p className='costs-warning'>По выбранному году расходов не найдено.</p>
-
-    // Изменение контента по условию
-    if (filteredCosts.length > 0) {
-        costContent = filteredCosts
-            .map(cost => (
-                <CostItem
-                    key={cost.id}
-                    date={cost.date}
-                    desc={cost.description}
-                    price={cost.price}
-                />)
-            )
-    }
-
     // Разметка компонента
     return (
         <div>
@@ -44,7 +28,7 @@ const CostItems = (props) => {
                     year={selectedYear}
                     onChangeYear={onChangeYear}
                 />
-                {costContent}
+                <CostList costs={filteredCosts}/>
             </Card>
         </div>
     )

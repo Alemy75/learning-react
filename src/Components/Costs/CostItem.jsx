@@ -5,17 +5,19 @@ import DateItem from "./DateItem";
 const CostItem = (props) => {
 
     return (
-        <Card className='cost-item'>
-            <DateItem
-                date={props.date}
-            />
-            <div className="cost-item__description">
-                <h2>{props.desc}</h2>
-                <div className="cost-item__price">
-                    ${props.price}
+        <li>
+            <Card className='cost-item'>
+                <DateItem
+                    date={props.date}
+                />
+                <div className="cost-item__description">
+                    <h2>{props.desc}</h2>
+                    <div className="cost-item__price">
+                        ${props.price}
+                    </div>
                 </div>
-            </div>
-        </Card>
+            </Card>
+        </li>
     )
 }
 
