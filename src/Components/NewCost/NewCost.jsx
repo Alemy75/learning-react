@@ -4,6 +4,8 @@ import CostForm from "./CostForm";
 
 
 const NewCost = (props) => {
+
+    // Функция добавления в список новой покупки
     const onSaveCostData = (inputCostData) => {
         const costData = {
             ...inputCostData,

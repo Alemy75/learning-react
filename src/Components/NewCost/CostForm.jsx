@@ -3,22 +3,28 @@ import './CostForm.css'
 
 
 const CostForm = (props) => {
+
+    // Состояния для названия, цены, даты покупки
     const [inputName, setInputName] = useState('')
     const [inputCost, setInputCost] = useState('')
     const [inputDate, setInputDate] = useState('')
 
+    // Перезапись состояния
     const nameChangeHandler = (event) => {
         setInputName(event.target.value)
     }
 
+    // Перезапись состояния
     const costChangeHandler = (event) => {
         setInputCost(event.target.value)
     }
 
+    // Перезапись состояния
     const dateChangeHandler = (event) => {
         setInputDate(event.target.value)
     }
 
+    // Создание submit на добавление новой покупки
     const submitHandler = (event) => {
         event.preventDefault();
 

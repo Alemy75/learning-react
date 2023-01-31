@@ -14,3 +14,12 @@
 	-moz-box-shadow: 0px 9px 27px 0px rgba(34, 60, 80, 0.1);
 	box-shadow: 0px 9px 27px 0px rgba(34, 60, 80, 0.1);
 }
+
+.costs-warning {
+	color: #cccccc;
+	width: 100%;
+	text-align: center;
+	margin-bottom: 100px;
+	margin-top: 100px;
+
+}

@@ -1,6 +1,8 @@
 import "./CostFilter.css";
 
 const CostsFilter = (props) => {
+
+    // Функция записи состояния года в фильтре
     const yearChangeHandler = (event) => {
         props.onChangeYear(event.target.value)
     };
