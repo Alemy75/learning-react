@@ -3,6 +3,7 @@ import './CostItems.css'
 import Card from '../UI/Card'
 import CostFilter from "./CostFilter";
 import {useState} from "react";
+import CostsDiagram from "./CostsDiagram";
 
 const CostItems = (props) => {
     // Состояие для сортировки списка по году
@@ -15,9 +16,7 @@ const CostItems = (props) => {
 
     // Функция, фильтрующая список по году
     const filteredCosts = props.costs.filter(cost => {
-        return cost.date
-            .getFullYear()
-            .toString() === selectedYear
+        return cost.date.getFullYear().toString() === selectedYear
     })
 
     // Разметка компонента
@@ -28,6 +27,7 @@ const CostItems = (props) => {
                     year={selectedYear}
                     onChangeYear={onChangeYear}
                 />
+                <CostsDiagram costs={filteredCosts}/>
                 <CostList costs={filteredCosts}/>
             </Card>
         </div>
